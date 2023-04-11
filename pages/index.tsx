@@ -53,7 +53,7 @@ export default function Demo() {
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                     </div>
 
-                    <div className="flex flex-row overflow-x-auto w-full pl-16 lg:pl-0 lg:invt-op-card-container max-w-invt-op-card-container lg:grid lg:grid-flow-row lg:grid-cols-3">
+                    <div className="flex flex-row overflow-x-auto w-full pl-16 lg:pl-0 lg:invt-op-card-container lg:max-w-invt-op-card-container lg:grid lg:grid-flow-row lg:grid-cols-3">
                         {
                             mockInvestmentOpportunitiesResponse().investment_opportunities.map((investmentOpportunity) => {
                                 return (
