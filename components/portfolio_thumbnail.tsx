@@ -1,4 +1,5 @@
 interface PortfolioThumbnailProps extends React.HTMLAttributes<HTMLDivElement> {
+    key: string,
     logo_url: string,
     is_unicorn?: boolean,
     is_markup?: boolean,
@@ -7,6 +8,7 @@ interface PortfolioThumbnailProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 export default function PortfolioThumbnail({
+    key,
     logo_url,
     is_unicorn = false,
     is_markup = false,
@@ -27,7 +29,7 @@ export default function PortfolioThumbnail({
     }
 
     return (
-        <div className={`relative ${containerClass()} ${className}`}>
+        <div id={key} className={`relative ${containerClass()} ${className}`}>
             <img src={logo_url} className="port-thumbnail min-w-fit max-w-fit" alt="return_some_name_in_api" />
 
             { 
