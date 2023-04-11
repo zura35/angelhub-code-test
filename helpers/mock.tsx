@@ -18,7 +18,9 @@ export function mockInvestmentOpportunitiesResponse(): ListInvestmentOpportuniti
             logo_url: "https://picsum.photos/48",
             cover_url: "https://picsum.photos/390/240",
             tag: "Web3",
-            description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            description: `${
+                i === 1 ? "Lorem ipsum dolor sit amet." : "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+            }`,
         }
     
         response.investment_opportunities.push(r)
