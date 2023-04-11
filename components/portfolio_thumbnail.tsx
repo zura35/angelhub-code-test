@@ -35,7 +35,7 @@ export default function PortfolioThumbnail({
             { 
                 is_unicorn && 
                     <div className="port-thumbnail-unicorn-tag absolute top-0 left-0 flex justify-center items-center w-full h-fit">
-                        <img src="/unicorn_logo_18x18.svg" className="mx-1" alt="unicorn" />
+                        <img src="./unicorn_logo_18x18.svg" className="mx-1" alt="unicorn" />
                         Unicorn
                     </div> 
             }
