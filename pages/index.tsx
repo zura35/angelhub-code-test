@@ -1,3 +1,5 @@
+import crypto from "crypto"
+
 import InvestmentOpportunityCard from "@/components/investment_opportunity_card"
 import PortfolioContainer from "@/components/portfolio_container"
 import PortfolioThumbnail from "@/components/portfolio_thumbnail"

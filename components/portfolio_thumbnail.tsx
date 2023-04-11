@@ -1,3 +1,5 @@
+import crypto from "crypto"
+
 interface PortfolioThumbnailProps extends React.HTMLAttributes<HTMLDivElement> {
     logo_url: string,
     is_unicorn?: boolean,
