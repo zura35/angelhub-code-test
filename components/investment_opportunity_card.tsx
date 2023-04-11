@@ -1,5 +1,4 @@
 interface InvestmentOpportunityCardProps {
-    key: string,
     id: number,
     name: string,
     logo_url: string,
@@ -9,7 +8,6 @@ interface InvestmentOpportunityCardProps {
 }
 
 export default function InvestmentOpportunityCard({
-    key,
     id,
     name,
     logo_url,
@@ -18,7 +16,7 @@ export default function InvestmentOpportunityCard({
     description,
 }: InvestmentOpportunityCardProps) {
     return (
-        <div key={key} className="flex flex-col relative col-span-1 min-w-invt-op-cover max-w-invt-op-cover min-h-invt-op-cover max-h-invt-op-cover my-6 mr-2 lg:mx-2 shadow-lg">
+        <div key={`invt-op-card-${id}`} className="flex flex-col relative col-span-1 min-w-invt-op-cover max-w-invt-op-cover min-h-invt-op-cover max-h-invt-op-cover my-6 mr-2 lg:mx-2 shadow-lg">
             <div className="invt-op-card-logo absolute z-3">
                 <img src={logo_url} alt={name} />
             </div>

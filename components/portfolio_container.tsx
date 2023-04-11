@@ -17,17 +17,17 @@ export default function PortfolioContainer(
     }: PortfolioContainerProps
 ) {
     return (
-        <div className={`flex flex-col w-full ${className}`}>
+        <div key={`port-container-${title}`} className={`flex flex-col w-full ${className}`}>
             <div 
                 className="port-container-title py-2 px-8"
                 onClick={onCompactClicked}> {title} </div>
             <div className={
-                `port-container-children ${focused ? "flex pt-4" : "h-0"} transition-spacing lg:flex flex-row overflow-x-auto lg:grid lg:grid-flow-row lg:grid-cols-3 px-6 lg:px-8 lg:pt-4 lg:h-fit lg:grow pb-10}`
+                `port-container-children flex flex-row overflow-x-auto px-6 transition-spacing ${focused ? "flex pt-4" : "h-0"} lg:grid lg:grid-flow-row lg:grid-cols-3 lg:px-8 lg:py-4 lg:grow lg:h-fit }`
             }>
                 {
-                    Children.map(children, (child) => {
+                    Children.map(children, (child, i) => {
                         return (
-                            <div className="col-span-1 w-fit">
+                            <div key={`port-container-child-${title}-${i}`} className="col-span-1 w-fit">
                                 {child}
                             </div>
                         )

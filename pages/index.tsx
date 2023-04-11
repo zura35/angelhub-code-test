@@ -18,9 +18,10 @@ export default function Demo() {
         let isLast = array.indexOf(data) === array.length - 1
 
         return (
-            <PortfolioContainer 
+            <PortfolioContainer
+                key={crypto.randomUUID()}
                 title={data.category}
-                className={`lg:mb-8 ${isLast ? "grow" : ""}`}
+                className={`lg:mb-8 ${isLast ? "lg:flex-1" : ""}`}
                 onCompactClicked={() => {setSelectedCategory(data.category)}}
                 focused={selectedCategory === data.category}
                 >
@@ -28,7 +29,7 @@ export default function Demo() {
                     data.successful_companies.map((successfulCompany) => {
                         return (
                             <PortfolioThumbnail
-                                key={`port-thumbnail-${successfulCompany.id}`}
+                                key={crypto.randomUUID()}
                                 logo_url={successfulCompany.logo_url}
                                 is_unicorn={successfulCompany.is_unicorn}
                                 is_markup={successfulCompany.is_markup}
@@ -59,7 +60,7 @@ export default function Demo() {
                                 return (
                                     <div key={`invt-op-${investmentOpportunity.id}`} className="flex flex-row justify-center items-center">
                                         <InvestmentOpportunityCard
-                                            key={`invt-op-card-${investmentOpportunity.id}`}
+                                            key={crypto.randomUUID()}
                                             id={investmentOpportunity.id}
                                             name={investmentOpportunity.name}
                                             logo_url={investmentOpportunity.logo_url}
