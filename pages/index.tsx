@@ -1,4 +1,4 @@
-import crypto from "crypto"
+import { v4 } from "uuid"
 
 import InvestmentOpportunityCard from "@/components/investment_opportunity_card"
 import PortfolioContainer from "@/components/portfolio_container"
@@ -21,7 +21,7 @@ export default function Demo() {
 
         return (
             <PortfolioContainer
-                key={crypto.randomUUID()}
+                key={v4()}
                 title={data.category}
                 className={`lg:mb-8 ${isLast ? "lg:flex-1" : ""}`}
                 onCompactClicked={() => {setSelectedCategory(data.category)}}
@@ -31,7 +31,7 @@ export default function Demo() {
                     data.successful_companies.map((successfulCompany) => {
                         return (
                             <PortfolioThumbnail
-                                key={crypto.randomUUID()}
+                                key={v4()}
                                 logo_url={successfulCompany.logo_url}
                                 is_unicorn={successfulCompany.is_unicorn}
                                 is_markup={successfulCompany.is_markup}
@@ -62,7 +62,7 @@ export default function Demo() {
                                 return (
                                     <div key={`invt-op-${investmentOpportunity.id}`} className="flex flex-row justify-center items-center">
                                         <InvestmentOpportunityCard
-                                            key={crypto.randomUUID()}
+                                            key={v4()}
                                             id={investmentOpportunity.id}
                                             name={investmentOpportunity.name}
                                             logo_url={investmentOpportunity.logo_url}

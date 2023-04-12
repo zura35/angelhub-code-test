@@ -1,4 +1,4 @@
-import crypto from "crypto"
+import { v4 } from "uuid"
 
 interface PortfolioThumbnailProps extends React.HTMLAttributes<HTMLDivElement> {
     logo_url: string,
@@ -29,7 +29,7 @@ export default function PortfolioThumbnail({
     }
 
     return (
-        <div key={crypto.randomUUID()} className={`relative ${containerClass()} ${className}`}>
+        <div key={v4()} className={`relative ${containerClass()} ${className}`}>
             <img src={logo_url} className="port-thumbnail min-w-fit max-w-fit" alt="return_some_name_in_api" />
 
             { 
